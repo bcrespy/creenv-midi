@@ -34,11 +34,13 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "ccapture.js": "^1.1.0"
+    "ccapture.js": "^1.0.8",
+    "webm-writer": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@creenv/canvas": "^0.1.3",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
