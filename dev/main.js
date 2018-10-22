@@ -1,34 +1,26 @@
 import Canvas from "@creenv/canvas";
+import Creenv from "@creenv/core";
 import Capture from "../lib/index";
 
 
 
-
 let cvs = new Canvas();
-let capture = new Capture();
-let i = 0;
 
-function draw () {
-  if (i == 50 ) {
-    capture.ccapture.start();
-  }
-  if (i >= 50 && i < 4000) {
-    capture.ccapture(cvs.canvas);
-  }
-  if (i == 4000) {
-    console.log("we save");
-    capture.ccapture.stop();
-    capture.ccapture.save();
-  }
-  else 
-    window.requestAnimationFrame(draw);
 
-  cvs.background("#0000ff");
-
-  ++i;
-  cvs.fillStyle("#ff0000");
-  cvs.rect(Math.cos(i/10)*50+window.innerWidth/2-30, window.innerHeight/2-30, 60, 60);
+class project extends Creenv {
+  render () {
+    //cvs.background("#0000ff");
+    cvs.background("#ffffff");
+    cvs.fillStyle("#efefef");
+    cvs.rect(Math.cos(this.elapsedTime/500)*50+window.innerWidth/2-30, window.innerHeight/2-30, 60, 60);
+  }
 }
 
+let proj = new project();
+proj.bootstrap();
 
-draw();
+let opt = {
+  canvas: cvs
+}
+
+let capture = new Capture(proj, opt);

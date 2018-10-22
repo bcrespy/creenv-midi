@@ -1,24 +1,29 @@
 {
-  "name": "@creenv/hud",
+  "name": "@creenv/capture",
   "version": "0.0.1",
-  "description": "the creenv HUD, used to display and handle HUDElements",
+  "description": "Creenv Capture allows you to export your work as a video file, in the easiest possible way",
   "keywords": [
-    "stats",
-    "stat",
+    "capture",
+    "export",
+    "video",
+    "canvas",
+    "image",
+    "file",
+    "render",
     "creenv",
     "creative",
     "environment"
   ],
   "license": "MIT",
   "author": "Baptiste Crespy",
-  "homepage": "https://github.com/bcrespy/creenv-hud.git",
+  "homepage": "https://github.com/bcrespy/creenv-capture.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bcrespy/creenv-hud.git"
+    "url": "https://github.com/bcrespy/creenv-capture.git"
   },
   "bugs": {
     "mail": "baptiste.crespy@gmail.com",
-    "url": "https://github.com/bcrespy/creenv-hud/issues"
+    "url": "https://github.com/bcrespy/creenv-capture/issues"
   },
   "main": "lib/index.js",
   "files": [
@@ -34,8 +39,7 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "ccapture.js": "^1.0.8",
-    "webm-writer": "^0.2.1"
+    "@creenv/core": "^0.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
