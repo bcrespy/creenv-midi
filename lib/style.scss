@@ -1,0 +1,105 @@
+.controls {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  background: #354349;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 600px;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .info-frames {
+    position: absolute;
+    top: 5px; left: 5px;
+    color: white;
+    font-size: 11px;
+    font-family: Source Sans, Helvetica, Arial, Verdana, sans-serif;
+    cursor: default;
+
+    .frames-nb {
+      display: inline-block;
+      min-width: 20px;
+      text-align: right;
+      cursor: default;
+    }
+  }
+
+  .info-time {
+    position: absolute;
+    bottom: 5px; left: 5px;
+    color: white;
+    font-size: 11px;
+    font-family: Source Sans, Helvetica, Arial, Verdana, sans-serif;
+
+    .time-nb {
+      display: inline-block;
+      min-width: 20px;
+      text-align: right;
+    }
+  }
+
+  .play-buttons {
+    position: absolute; 
+    top: 50%; left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.play {
+      background-image: url("./img/play.png");
+
+      &.paused {
+        background-image: url("./img/pause.png");
+      }
+    }
+
+    &.change-frame {
+      background-image: url("./img/next.png");
+
+      &.previous {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.record {
+      background: #ffffff;
+      width: 35px;
+      height: 35px;
+      border-radius: 40px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.8;
+      transition: all 0.4s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.stop {
+        background: #ff0000;
+        border-radius: 0;
+      }
+    }
+  }
+}
