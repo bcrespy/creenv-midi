@@ -39,7 +39,9 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@creenv/core": "^0.1.2"
+    "@creenv/core": "^0.1.2",
+    "fs": "0.0.1-security",
+    "webm-writer": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
