@@ -15,7 +15,6 @@ let cvs = new Canvas();
 class project extends Creenv {
   render () {
     stats.begin();
-    console.log(this.elapsedTime);
     //cvs.background("#0000ff");
     cvs.background("#ffffff");
     cvs.fillStyle("#efefef");
