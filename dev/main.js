@@ -19,7 +19,7 @@ class project extends Creenv {
     cvs.background("#ffffff");
     cvs.fillStyle("#efefef");
     //cvs.fillStyle("#ff00ff");
-    cvs.rect(Math.cos(this.elapsedTime)*50+window.innerWidth/2-30, window.innerHeight/2-30, 60, 60);
+    cvs.rect(Math.cos(this.elapsedTime/500)*50+window.innerWidth/2-30, window.innerHeight/2-30, 60, 60);
     stats.end();
   }
 }
