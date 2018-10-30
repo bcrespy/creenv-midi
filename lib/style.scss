@@ -53,9 +53,34 @@
     opacity: 0.4;
     transition: opacity 0.3s;
     cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: attr(data-infos);
+      position: absolute;
+      bottom: 28px; left: 50%;
+      transform: translate(-50%, 0);
+      background: rgba(0,0,0,1);
+      color: #fff;
+      width: 180px;
+      text-align: center;
+      padding: 6px 0;
+      display: none;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s, bottom 0.2s;
+      border-radius: 4px;
+      font-family: Source Sans, Helvetica, Arial, Verdana, sans-serif;
+      font-size: 13px;
+    }
 
     &:hover {
       opacity: 0.8;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      bottom: 40px;
     }
 
     &.play {
@@ -70,7 +95,11 @@
       background-image: url("./img/next.png");
 
       &.previous {
-        transform: rotate(180deg);
+        transform: scaleX(-1);
+
+        &::after {
+          transform: translate(-50%, 0) scaleX(-1);
+        }
       }
     }
 
@@ -96,6 +125,14 @@
       &.recording {
         background: #ff0000;
         border-radius: 0;
+      }
+    }
+  }
+
+  &.button-infos {
+    .button {
+      &::after {
+        display: block;
       }
     }
   }
