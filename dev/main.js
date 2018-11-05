@@ -28,7 +28,11 @@ let proj = new project();
 //proj.bootstrap();
 
 let opt = {
-  canvas: cvs
+  canvas: cvs.canvas,
+  
+  export: {
+    type: "jpeg-sequence"
+  }
 }
 
 let capture = new Capture(proj, opt);
