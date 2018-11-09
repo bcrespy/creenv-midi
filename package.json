@@ -39,6 +39,7 @@
   },
   "peerDependencies": {},
   "dependencies": {
+    "@creenv/audio": "^0.3.4",
     "@creenv/core": "^0.1.2",
     "fs": "0.0.1-security",
     "jszip": "^3.1.5",
