@@ -2,6 +2,7 @@ import Canvas from "@creenv/canvas";
 import Creenv from "@creenv/core";
 import HUD from "@creenv/hud";
 import Stats from "@creenv/stats";
+import AudioManager from "@creenv/audio/manager";
 import Capture from "../lib/index";
 
 
@@ -13,6 +14,19 @@ let cvs = new Canvas();
 
 
 class project extends Creenv {
+  constructor() {
+    super();
+    this.audio = new AudioManager(AudioManager.SOURCE_TYPE.FILE, {
+      filepath: "test.mp3"
+    }, true);
+  }
+  
+  init () {
+    return new Promise(resolve => {
+      this.audio.init().then(resolve);
+    })
+  }
+
   render () {
     stats.begin();
     //cvs.background("#0000ff");
@@ -31,6 +45,9 @@ let opt = {
   canvas: cvs.canvas,  
   export: {
     type: "jpeg-sequence"
+  },
+  audio: {
+    manager: proj.audio
   }
 }
 
