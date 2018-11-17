@@ -1,29 +1,23 @@
 {
-  "name": "@creenv/capture",
-  "version": "0.3.0",
-  "description": "Creenv Capture allows you to export your work as a video file, in the easiest possible way",
+  "name": "@creenv/midi",
+  "version": "0.0.1",
+  "description": "Use MIDI controlers in your creative applications, either as a control source or pure input",
   "keywords": [
-    "capture",
-    "export",
-    "video",
-    "canvas",
-    "image",
-    "file",
-    "render",
+    "midi",
     "creenv",
-    "creative",
-    "environment"
+    "keyboard",
+    "controls"
   ],
   "license": "MIT",
   "author": "Baptiste Crespy",
-  "homepage": "https://github.com/bcrespy/creenv-capture.git",
+  "homepage": "https://github.com/bcrespy/creenv-midi.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bcrespy/creenv-capture.git"
+    "url": "https://github.com/bcrespy/creenv-midi.git"
   },
   "bugs": {
     "mail": "baptiste.crespy@gmail.com",
-    "url": "https://github.com/bcrespy/creenv-capture/issues"
+    "url": "https://github.com/bcrespy/creenv-midi/issues"
   },
   "main": "lib/index.js",
   "files": [
@@ -43,7 +37,8 @@
     "@creenv/core": "^0.1.2",
     "fs": "0.0.1-security",
     "jszip": "^3.1.5",
-    "webm-writer": "^0.2.1"
+    "webm-writer": "^0.2.1",
+    "webmidi": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
