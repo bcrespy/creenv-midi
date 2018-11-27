@@ -1,6 +1,6 @@
 {
   "name": "@creenv/midi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use MIDI controlers in your creative applications, either as a control source or pure input",
   "keywords": [
     "midi",
